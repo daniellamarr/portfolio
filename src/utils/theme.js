@@ -1,9 +1,11 @@
 const colors = {
-  primary: '#FFD700',
+  primary: '#D87400',
   black: '#000000',
   white: '#FFFFFF',
   grayEE: '#EEEEEE',
-  grayAA: '#AAAAAA'
+  grayAA: '#AAAAAA',
+  grayFB: '#FBFBFB',
+  gray77: '#777777'
 };
 
 const fontFamily = {

@@ -7,9 +7,11 @@ export default class Text extends Component {
     const color = this.props.color || colors.black;
     const fontWeight = this.props.bold ? 'bold' : 'normal';
     const fontFamily = font[this.props.fontFamily] || font.primary;
+    const { style } = this.props;
     return (
       <p
         style={{
+          ...style,
           fontSize,
           color,
           fontWeight,

@@ -1,0 +1,291 @@
+// Home
+#home {
+  padding: 80px;
+  padding-top: 40px;
+  display: flex;
+}
+
+.home-text {
+  padding-top: 100px;
+  width: 50%;
+  z-index: 1;
+}
+
+.home-text p:first-child {
+  text-shadow: 5px 10px 40px $blendModeColor;
+}
+
+.home-image {
+  background-image: url(../images/lamarr.jpg);
+  background-position: 100% 30%;
+  background-size: cover;
+  width: 650px;
+  height: 500px;
+  box-shadow: 5px 10px 40px $blendModeColor;
+  z-index: 1;
+}
+
+.socials {
+  margin-top: 20px;
+}
+
+.socials svg {
+  margin-right: 15px;
+}
+
+.left-circle {
+  position: absolute;
+  left: -300px;
+  margin-top: 250px;
+  z-index: 0;
+}
+
+.right-circle {
+  position: absolute;
+  right: 0;
+  overflow: hidden;
+  width: 500px;
+  margin-top: 50px;
+  z-index: 0;
+}
+
+// Experience
+#experience {
+  position: relative;
+  background-color: $grayFB;
+  padding: 200px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  z-index: 2;
+}
+
+.header-title {
+  text-align: center;
+}
+
+.experience-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.experience {
+  width: 50%;
+  display: flex;
+  margin-bottom: 50px;
+  .details {
+    margin-left: 20px;
+    margin-top: -10px;
+  }
+  &:nth-of-type(even) {
+    width: 40%;
+    margin-left: 10%;
+  }
+}
+
+.experience p {
+  letter-spacing: 0.08em;
+}
+
+// Skills
+#skills {
+  background-image: url(../images/skills.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 50px;
+  padding-bottom: 0;
+  background-attachment: fixed;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+
+  img {
+    width: 80px;
+  }
+
+  .skill {
+    width: 25%;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
+// Portfolio
+#portfolio {
+  padding: 80px;
+}
+
+.portfolio-list {
+  margin-top: 50px;
+  display: flex;
+
+  .portfolio {
+    width: 25%;
+    position: relative;
+    margin-right: 2%;
+  }
+
+  .job {
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    box-shadow: $shadow;
+    background-color: $blendModeColor;
+    border-radius: 5px;
+    transition: .5s ease;
+  }
+
+  .overflow {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .portfolio:hover {
+    .overflow {
+      opacity: 1;
+    }
+
+    .job {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+}
+
+// Contact
+#contact {
+  // padding: 50px;
+  background-color: $grayEE;
+  display: none;
+  overflow: hidden;
+  .contact-box {
+    background-color: $white;
+    width: 500px;
+    padding: 30px;
+    box-shadow: $shadow;
+    border-radius: 5px;
+    text-align: left;
+  }
+
+  form {
+    input, textarea {
+      border: none;
+      border-bottom: 1px solid $grayAA;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      resize: none;
+      font-size: 14px;
+      font-family: $primary-font;
+    }
+
+    textarea {
+      height: 100px;
+    }
+  }
+
+  .contact-text {
+    padding: 50px;
+    width: 60%;
+    background-color: $primary;
+  }
+
+  .slant {
+    background-color: $grayEE;
+    padding: 50px;
+    width: 25%;
+    margin: 0 0 0 -5%;
+    text-align: center;
+    transform: skew(40deg);
+    -webkit-transform: skew(40deg);
+    -moz-transform: skew(40deg);
+    -o-transform: skew(40deg);
+    overflow: hidden;
+    position: relative;
+
+    .inner-slant {
+      transform: skew(-40deg);
+      -webkit-transform: skew(-40deg);
+      -moz-transform: skew(-40deg);
+      -o-transform: skew(-40deg);
+    }
+  }
+}
+
+.background {
+  background-color: transparent;
+  display: flex;
+
+  .slant {
+    background-color: transparent;
+    height: 100px;
+    width: 50%;
+  }
+
+  .image {
+    background-image: url(../images/lamarr2.jpg);
+    background-position: 100% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 140px;
+    width: 70%;
+  }
+
+  .slant:after {
+    content: "";
+    background-color: $primary;
+    position: absolute;
+    top: auto;
+    left: auto;
+    width: 50%;
+    padding: 70px;
+    padding-right: 0;
+    -webkit-transform-origin: 100% 0;
+    -ms-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+    -webkit-transform: skew(45deg);
+    -ms-transform: skew(45deg);
+    transform: skew(-45deg);
+    z-index: 10;
+  }
+
+  .slant-inner {
+    position: absolute;
+    z-index: 11;
+    margin-top: 40px;
+    left: 50px;
+  }
+}
+
+.modal-portfolio {
+  display: flex;
+  flex-direction: row;
+
+  .portfolio-image {
+    height: 80vh;
+    width: 50%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .portfolio-details {
+    margin-left: 5%;
+    margin-top: 150px;
+    width: 45%;
+  }
+}

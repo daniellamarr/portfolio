@@ -14,10 +14,14 @@ export default class Logo extends Component {
             >
             Daniel Lamarr
           </Text>
-          : <img
-            src="assets/images/logo.png"
-            width={size || "50px"}
-          />
+          : this.props.logoBg === 'white' ?
+            <img
+              src="assets/images/logo-w.jpg"
+              width={size || "50px"}/>
+            :
+            <img
+              src="assets/images/logo.jpg"
+              width={size || "50px"}/>
         }
       </div>
     )
