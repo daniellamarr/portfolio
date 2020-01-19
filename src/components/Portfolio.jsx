@@ -51,7 +51,7 @@ export default class Portfolio extends Component {
     return (
       portfolios.map((portfolio, index) => (
         <div className="portfolio" key={index}>
-          <div className="job" style={{ backgroundImage: `url(${imgPath}${portfolio.image})` }} />
+          <div className="job" style={{ backgroundImage: `url(${require(`../assets/images/jobs/${portfolio.image}`)})` }} />
           <div className="overflow" onPointer>
             <Text
               color={colors.white}

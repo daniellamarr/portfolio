@@ -7,53 +7,53 @@ export default class Skill extends Component {
     const skills = [
       {
         language: 'JavaScript',
-        image: 'assets/images/skills/javascript.png'
+        image: 'javascript.png'
       },
       {
         language: 'PHP',
-        image: 'assets/images/skills/php.png'
+        image: 'php.png'
       },
       {
         language: 'Python',
-        image: 'assets/images/skills/py.png'
+        image: 'py.png'
       },
       {
         language: 'React',
-        image: 'assets/images/skills/react.png'
+        image: 'react.png'
       },
       {
         language: 'Node JS',
-        image: 'assets/images/skills/nodejs.png'
+        image: 'nodejs.png'
       },
       {
         language: 'React Native',
-        image: 'assets/images/skills/react.png'
+        image: 'react.png'
       },
       {
         language: 'Express JS',
-        image: 'assets/images/skills/expressjs.jpeg'
+        image: 'expressjs.jpeg'
       },
       {
         language: 'Flask',
-        image: 'assets/images/skills/flask.png'
+        image: 'flask.png'
       },
       {
         language: 'Mongo DB',
-        image: 'assets/images/skills/mongo.png'
+        image: 'mongo.png'
       },
       {
         language: 'PostgreSQL',
-        image: 'assets/images/skills/postgresql.png'
+        image: 'postgresql.png'
       },
       {
         language: 'Firebase',
-        image: 'assets/images/skills/firebase.png'
+        image: 'firebase.png'
       }
     ]
     return (
       skills.map((skill, index) => (
         <div key={index} className="skill">
-          <img src={skill.image} />
+          <img src={require(`../assets/images/skills/${skill.image}`)} />
           <Text
             color={colors.white}
             style={{

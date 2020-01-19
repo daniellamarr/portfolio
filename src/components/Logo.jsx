@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Text from './Text';
 import { colors } from '../utils/theme';
+import LogoWhite from '../assets/images/logo-w.jpg';
+import LogoBlack from '../assets/images/logo.jpg';
 
 export default class Logo extends Component {
   render() {
@@ -16,11 +18,11 @@ export default class Logo extends Component {
           </Text>
           : this.props.logoBg === 'white' ?
             <img
-              src="assets/images/logo-w.jpg"
+              src={LogoWhite}
               width={size || "50px"}/>
             :
             <img
-              src="assets/images/logo.jpg"
+              src={LogoBlack}
               width={size || "50px"}/>
         }
       </div>

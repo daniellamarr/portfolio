@@ -13,6 +13,8 @@ import Portfolio from '../components/Portfolio';
 import Footer from '../components/Footer';
 import Modal from '../components/Modal';
 import WhiteLogo from '../assets/images/logo.jpg';
+import Circle from '../assets/images/circle.png';
+import Lamarr from '../assets/images/lamarr2.jpg';
 
 export default class Home extends Component {
   constructor(props) {
@@ -138,10 +140,10 @@ export default class Home extends Component {
             </div>
             <div className="home-image" />
             <div className="left-circle">
-              <img src="/assets/images/circle.png" />
+              <img src={Circle} />
             </div>
             <div className="right-circle">
-              <img src="/assets/images/circle.png" />
+              <img src={Circle} />
             </div>
           </section>
           <section id="experience">
@@ -212,7 +214,7 @@ export default class Home extends Component {
                 >
                   Say Something
                 </Button> */}
-                <img src="./assets/images/lamarr2.jpg" width="100%" />
+                <img src={Lamarr} width="100%" />
               </div>
             </div>
             {/* <center>
@@ -253,7 +255,7 @@ export default class Home extends Component {
         <Modal close={() => this.setState({ modalVisible: false })}>
           <div className="modal-content">
             <div className="modal-portfolio">
-              <div className="portfolio-image" style={{ backgroundImage: `url(../assets/images/jobs/${this.state.portfolio.image}` }}></div>
+              <div className="portfolio-image" style={{ backgroundImage: `url(${require(`../assets/images/jobs/${this.state.portfolio.image}`)}` }}></div>
               <div className="portfolio-details">
                 <Text color={colors.white} size="25px" style={{ marginBottom: 20 }}>
                   {this.state.portfolio.name}
