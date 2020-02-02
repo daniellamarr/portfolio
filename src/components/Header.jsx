@@ -7,8 +7,8 @@ export default class Header extends Component {
   render() {
     const links = [
       { text: 'Resume', to: '/resume' },
-      { text: 'Experience', to: '/experience' },
-      { text: 'Portfolio', to: '/portfolio' }
+      { text: 'Experience', to: '#experience' },
+      { text: 'Portfolio', to: '#portfolio' }
     ];
     const linkStyle = {
       color: colors.primary,
@@ -26,20 +26,20 @@ export default class Header extends Component {
               if (link.to === '/resume') {
                 return (
                   <li key={index}>
-                    <a href="/assets/misc/resume.pdf" style={linkStyle}>
+                    <a href="https://drive.google.com/file/d/1twhfJP59bPjK3JgmbPxhbVFn-4mPpIj_/view?usp=sharing" style={linkStyle} target="_blank">
                       {link.text}
                     </a>
                   </li>
                 )
               }
               return (
-                <li key={index}>
-                  <Link
+                <li key={index} className="scroll-item">
+                  <a
                     style={linkStyle}
-                    to={link.to}
+                    href={link.to}
                   >
                     {link.text}
-                  </Link>
+                  </a>
                 </li>
               )
             })}

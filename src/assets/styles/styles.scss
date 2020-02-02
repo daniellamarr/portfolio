@@ -1,6 +1,10 @@
 @import 'variables.scss';
 @import 'home.style.scss';
 
+html{
+  scroll-behavior: smooth;
+}
+
 * {
   padding: 0;
   margin: 0;

@@ -74,13 +74,6 @@ export default class Home extends Component {
     ]
     return (
       <section id="container">
-        {/* {this.state.loadingOverlay &&
-          <div className="loadingOverlay">
-            <div className="inner">
-              <img src={WhiteLogo} />
-            </div>
-          </div>
-        } */}
         <Header />
         <main>
           <section id="home">
@@ -197,46 +190,6 @@ export default class Home extends Component {
               <Portfolio viewMore={this.viewMore} />
             </div>
           </section>
-          <section id="contact">
-            <div className="contact-text">
-              <Text size="25px" style={{letterSpacing: 20}} color={colors.black}>
-                GET IN TOUCH WITH ME
-              </Text>
-            </div>
-            <div className="slant">
-              <div className="inner-slant">
-                {/* <Button
-                  size="medium"
-                  bgColor={colors.black}
-                  style={{
-                    letterSpacing: '0.2em'
-                  }}
-                >
-                  Say Something
-                </Button> */}
-                <img src={Lamarr} width="100%" />
-              </div>
-            </div>
-            {/* <center>
-              <div className="contact-box">
-                <Text style={{ marginBottom: '10px' }}>Have something for me?</Text>
-                <form>
-                  <input type="text" placeholder="Hi, What's your name?" />
-                  <input type="text" placeholder="Your email address" />
-                  <textarea placeholder="Tell me something you'd want me to do"></textarea>
-                  <Button
-                    size="small"
-                    style={{
-                      marginTop: '20px',
-                      letterSpacing: '0.2em'
-                    }}
-                  >
-                    SEND
-                  </Button>
-                </form>
-              </div>
-            </center> */}
-          </section>
           <div className="background">
             <div className="slant">
               <div className="slant-inner">
@@ -244,7 +197,7 @@ export default class Home extends Component {
                   GET IN TOUCH WITH ME
                 </Text>
                 <Text size="14px" style={{letterSpacing: 3}} color={colors.white}>
-                  Send A Message
+                  DON'T BE A STRANGER
                 </Text>
               </div>
             </div>
