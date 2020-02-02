@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Text from './Text';
 import { colors } from '../utils/theme';
+import LogoWhite from '../assets/images/logo-w.jpg';
+import LogoBlack from '../assets/images/logo.jpg';
 
 export default class Logo extends Component {
   render() {
@@ -14,10 +16,14 @@ export default class Logo extends Component {
             >
             Daniel Lamarr
           </Text>
-          : <img
-            src="assets/images/logo.png"
-            width={size || "50px"}
-          />
+          : this.props.logoBg === 'white' ?
+            <img
+              src={LogoWhite}
+              width={size || "50px"}/>
+            :
+            <img
+              src={LogoBlack}
+              width={size || "50px"}/>
         }
       </div>
     )

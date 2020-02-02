@@ -44,18 +44,21 @@ export default class Button extends Component {
   }
 
   render() {
-    const backgroundColor = this.props.bgColor || colors.primary;
+    const backgroundColor = this.props.bgColor || colors.black;
     const color = this.props.color || colors.white;
     const float = this.props.float || 'none';
+    const { style } = this.props;
     return (
       <button
         style={{
+          ...style,
           ...this.roundedButton(),
           ...this.buttonSize(),
           backgroundColor,
           color,
           float
         }}
+        onClick={this.props.onClick}
       >
         {this.props.children}
       </button>
